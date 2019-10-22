@@ -7,3 +7,4 @@ class Settings:
     bullet_width = 3
     bullet_height = 15
     bullet_color = (255, 0, 255)
+    bullets_allowed = 3
