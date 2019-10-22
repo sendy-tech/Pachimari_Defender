@@ -9,8 +9,7 @@ def run_game():
     pa_settings = Settings
     screen = pygame.display.set_mode((pa_settings.screen_width, pa_settings.screen_height), pygame.FULLSCREEN)
     pygame.display.set_caption('Pachimary Defender')
-
-    pachimari = Pachimari(screen)
+    pachimari = Pachimari(pa_settings, screen)
 
     while True:
         gf.check_events(pachimari)
