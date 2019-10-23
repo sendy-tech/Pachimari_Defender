@@ -10,6 +10,8 @@ def chech_keydown_events(event, pa_settings, screen, pachimari, bullets):
         pachimari.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(pa_settings, screen, pachimari, bullets)
+    elif event.key == pygame.K_ESCAPE:
+        sys.exit()
 
 
 def fire_bullet(pa_settings, screen, pachimari, bullets):
@@ -35,11 +37,12 @@ def check_events(pa_settings, screen, pachimari, bullets):
             chech_keyup_events(event, pachimari)
 
 
-def update_screen(pa_settings, screen, pachimari, bullets):
+def update_screen(pa_settings, screen, pachimari, reaper,  bullets):
     screen.fill(pa_settings.bg_color)
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     pachimari.blitme()
+    reaper.blitme()
     pygame.display.flip()
 
 
