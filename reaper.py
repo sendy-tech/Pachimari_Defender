@@ -7,7 +7,7 @@ class Reaper(Sprite):
         super(Reaper, self).__init__()
         self.screen = screen
         self.pa_settings = pa_settings
-        self.image = pygame.image.load('images/HellfireShotgun.bmp')
+        self.image = pygame.image.load('images/reaper.bmp')
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
