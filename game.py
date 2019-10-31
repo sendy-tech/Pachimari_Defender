@@ -13,12 +13,14 @@ def run_game():
     pachimari = Pachimari(pa_settings, screen)
     bullets = Group()
     reapers = Group()
+    stars = Group()
     gf.create_fleet(pa_settings, screen, pachimari, reapers)
+    gf.create_fleet_stars(pa_settings, screen, stars)
 
     while True:
         gf.check_events(pa_settings, screen, pachimari, bullets)
         pachimari.update()
         gf.update_bullets(bullets)
-        gf.update_screen(pa_settings, screen, pachimari, reapers, bullets)
+        gf.update_screen(pa_settings, screen, pachimari, reapers, bullets, stars)
 
 run_game()
